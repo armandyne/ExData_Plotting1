@@ -4,7 +4,7 @@ if (!file.exists("./data")) {
 
 url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 zipfile <- file.path("./data", "household_power_consumption.zip")
-datafile <- file.path("./data", "household_power_consumption.csv")
+datafile <- file.path("./data", "household_power_consumption.txt")
 
 if (!file.exists(zipfile)) {
      download.file(url, zipfile)
