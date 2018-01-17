@@ -19,7 +19,7 @@ library(lubridate)
 library(dplyr)
 library(tidyr)
 dataset <-
-     read_csv2("./data/household_power_consumption.txt", col_types = "ccccccccc") %>%
+     read_csv2(datafile, col_types = "ccccccccc") %>%
      mutate_at(3:9, as.double) %>%
      unite("DateTime", Date, Time, sep=" ") %>%
      mutate(DateTime = dmy_hms(DateTime)) %>%
